@@ -66,11 +66,11 @@ export function Contact() {
         >
           <p className="text-primary font-mono text-sm mb-2">{"// Get In Touch"}</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-foreground">{"Let's Build "}</span>
+            <span className="text-foreground">Let's Work </span>
             <span className="text-primary">Together</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Have a project in mind or just want to chat? {"I'm"} always open to discussing new opportunities and creative ideas.
+            I&apos;m actively seeking full-time opportunities and freelance projects. Whether you have a job opening or want to discuss potential collaboration, I&apos;d love to hear from you.
           </p>
         </motion.div>
 
@@ -117,9 +117,9 @@ export function Contact() {
                   <Send className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground mb-1">Quick Response</h4>
+                  <h4 className="font-semibold text-foreground mb-1">Responsive Communication</h4>
                   <p className="text-sm text-muted-foreground">
-                    I usually respond within a few hours. Feel free to contact me for collaborations, freelance work, or project discussions.
+                    I prioritize quick responses to inquiries. Contact me for job opportunities, freelance projects, or technical discussions.
                   </p>
                 </div>
               </div>
@@ -132,10 +132,10 @@ export function Contact() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-primary" />
                 </span>
-                <span className="font-semibold text-foreground">Currently Available</span>
+                <span className="font-semibold text-foreground">Open to Opportunities</span>
               </div>
               <p className="text-sm text-muted-foreground">
-                {"I'm"} open to freelance projects and full-time opportunities in AI/ML and web development.
+                Actively seeking full-time positions and freelance projects. Interested in roles focusing on web development, database design, and backend architecture.
               </p>
             </div>
           </motion.div>

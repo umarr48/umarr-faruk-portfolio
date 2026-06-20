@@ -51,7 +51,7 @@ export function Projects() {
             <span className="text-primary">Projects</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl">
-            A selection of projects {"I've"} worked on, from AI-powered applications to developer tools and infrastructure.
+            Practical applications demonstrating full-stack development capabilities, database design, and real-world problem solving.
           </p>
         </motion.div>
 

@@ -63,11 +63,11 @@ export function Skills() {
         >
           <p className="text-primary font-mono text-sm mb-2">{"// Skills & Expertise"}</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-foreground">Technologies I </span>
-            <span className="text-primary">Work With</span>
+            <span className="text-foreground">Technical </span>
+            <span className="text-primary">Proficiency</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl">
-            A comprehensive toolkit built over years of crafting digital experiences.
+            Proficient in modern web development technologies with practical experience building full-stack applications. Strong foundation in both frontend and backend development.
           </p>
         </motion.div>
 

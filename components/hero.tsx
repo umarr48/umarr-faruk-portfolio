@@ -65,7 +65,7 @@ export function Hero() {
         >
           <p className="text-xl md:text-2xl text-muted-foreground font-mono">
             <span className="text-primary">{"<"}</span>
-            Final Year BCA Student
+            BCA Student
             <span className="text-primary">{" />"}</span>
             <span className="mx-3 text-border">|</span>
             <span className="text-primary">{"<"}</span>
@@ -81,9 +81,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed"
         >
-          I am a passionate software developer focused on building modern web applications 
-          using PHP, MySQL, JavaScript, and emerging technologies. I enjoy solving real-world 
-          problems and continuously improving my development skills.
+          I am a passionate BCA student focused on Full Stack Development. I enjoy building real-world web applications using PHP, MySQL, JavaScript, and modern development tools. My goal is to become a professional Software Developer.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -99,19 +97,6 @@ export function Hero() {
             onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
           >
             View Projects
-          </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-border hover:border-primary hover:text-primary px-8 py-6 text-lg"
-            onClick={() => {
-              const link = document.createElement('a');
-              link.href = '/resume.pdf';
-              link.target = '_blank';
-              link.click();
-            }}
-          >
-            Download Resume
           </Button>
           <Button
             size="lg"

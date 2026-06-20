@@ -7,22 +7,22 @@ const highlights = [
   {
     icon: Code2,
     title: "Clean Code",
-    description: "Writing maintainable, scalable, and well-documented code that stands the test of time.",
+    description: "Writing maintainable, scalable code following best practices and design patterns.",
   },
   {
     icon: Brain,
-    title: "AI Integration",
-    description: "Leveraging cutting-edge AI technologies to build intelligent, adaptive applications.",
+    title: "Problem Solving",
+    description: "Breaking down complex problems and building efficient, practical solutions.",
   },
   {
     icon: Rocket,
-    title: "Performance",
-    description: "Optimizing every aspect for speed, efficiency, and exceptional user experience.",
+    title: "Full Stack",
+    description: "Building complete applications from database design to user interface.",
   },
   {
     icon: Sparkles,
-    title: "Innovation",
-    description: "Constantly exploring new technologies and pushing the boundaries of what is possible.",
+    title: "Continuous Learning",
+    description: "Dedicated to mastering new technologies and industry best practices.",
   },
 ]
 
@@ -55,21 +55,21 @@ export function About() {
             className="space-y-6"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              {"I'm a Final Year BCA student with a passion for building modern web applications. My journey in tech started with curiosity about how applications work, and it has evolved into a dedicated pursuit of creating elegant solutions to real-world problems."}
+              I&apos;m a Final Year BCA student specializing in Full Stack Development with hands-on experience building practical web applications. My passion lies in creating efficient, user-friendly solutions that solve real-world problems. I&apos;ve developed strong fundamentals in software development through both academic coursework and personal projects.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Throughout my academic years and personal projects, I've built practical experience with <span className="text-primary">PHP</span>, <span className="text-primary">MySQL</span>, <span className="text-primary">JavaScript</span>, and modern web frameworks. I believe in the power of clean code, user-centered design, and continuous learning to build better applications.
+              My technical foundation includes <span className="text-primary">PHP</span>, <span className="text-primary">MySQL</span>, <span className="text-primary">JavaScript</span>, and modern web development practices. I excel at designing scalable database architectures, building responsive user interfaces, and writing clean, maintainable backend code. I&apos;m committed to best practices and writing code that other developers can easily understand and build upon.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I&apos;m constantly learning new technologies and frameworks to expand my skillset. My goal is to develop impactful applications that solve real problems and contribute to the tech community through quality work and knowledge sharing.
+              Beyond coding, I&apos;m dedicated to continuous learning and staying current with industry developments. I approach each project with a focus on quality, reliability, and delivering tangible value. I&apos;m ready to bring strong technical skills and a strong work ethic to my first professional role.
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border">
               {[
-                { value: "Final Year", label: "BCA Student" },
-                { value: "5+", label: "Key Projects" },
-                { value: "Strong", label: "Learning Mindset" },
+                { value: "BCA", label: "Final Year" },
+                { value: "5+", label: "Live Projects" },
+                { value: "Eager", label: "To Grow" },
               ].map(({ value, label }) => (
                 <div key={label} className="text-center">
                   <p className="text-3xl md:text-4xl font-bold text-primary">{value}</p>
