@@ -27,10 +27,12 @@ export function Footer() {
             <a href="#" className="text-2xl font-bold text-primary glow-text inline-block mb-2">
               U<span className="text-foreground">.</span>
             </a>
-            <div className="text-sm text-muted-foreground space-y-1">
-              <p>© {currentYear} Umarr Faruk. All Rights Reserved.</p>
-              <p>Built and Designed by Umarr Faruk.</p>
-            </div>
+            <p className="text-sm text-muted-foreground">
+              © {currentYear} Umarr. All Rights Reserved.
+            </p>
+            <p className="text-sm text-muted-foreground">
+              Designed & Developed by Umarr.
+            </p>
           </motion.div>
 
           {/* Built with love */}

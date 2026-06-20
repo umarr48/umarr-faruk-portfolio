@@ -14,19 +14,19 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Umarr Faruk | Full Stack Developer',
-  description: 'Portfolio of Umarr Faruk, a Final Year BCA Student and Full Stack Developer specializing in PHP, MySQL, JavaScript, and modern web technologies.',
+  title: 'Umarr | Full Stack Developer',
+  description: 'Portfolio of Umarr, a BCA Student and Full Stack Developer specializing in PHP, MySQL, JavaScript, and modern web technologies.',
   keywords: ['developer', 'full stack', 'PHP', 'MySQL', 'JavaScript', 'web development', 'BCA student'],
-  authors: [{ name: 'Umarr Faruk' }],
+  authors: [{ name: 'Umarr' }],
   openGraph: {
-    title: 'Umarr Faruk | Full Stack Developer',
-    description: 'Portfolio of Umarr Faruk, a Final Year BCA Student and Full Stack Developer specializing in PHP, MySQL, JavaScript, and modern web technologies.',
+    title: 'Umarr | Full Stack Developer',
+    description: 'Portfolio of Umarr, a BCA Student and Full Stack Developer specializing in PHP, MySQL, JavaScript, and modern web technologies.',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Umarr Faruk | Full Stack Developer',
-    description: 'Final Year BCA Student and Full Stack Developer.',
+    title: 'Umarr | Full Stack Developer',
+    description: 'BCA Student and Full Stack Developer.',
   },
 }
 

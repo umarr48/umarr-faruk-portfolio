@@ -67,13 +67,13 @@ export function About() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border">
               {[
-                { value: "BCA", label: "Final Year" },
-                { value: "5+", label: "Live Projects" },
-                { value: "Eager", label: "To Grow" },
+                { value: "Final Year", label: "BCA Student" },
+                { value: "Multiple", label: "Academic & Personal Projects" },
+                { value: "Strong", label: "Interest in Software Development" },
               ].map(({ value, label }) => (
                 <div key={label} className="text-center">
-                  <p className="text-3xl md:text-4xl font-bold text-primary">{value}</p>
-                  <p className="text-sm text-muted-foreground mt-1">{label}</p>
+                  <p className="text-2xl md:text-3xl font-bold text-primary leading-tight">{value}</p>
+                  <p className="text-xs text-muted-foreground mt-2">{label}</p>
                 </div>
               ))}
             </div>
