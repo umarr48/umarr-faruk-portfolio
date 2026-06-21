@@ -18,6 +18,10 @@ export const metadata: Metadata = {
   description: 'Portfolio of Umarr, a BCA Graduate and Full Stack Developer specializing in PHP, MySQL, JavaScript, and modern web technologies.',
   keywords: ['Umarr', 'Full Stack Developer', 'BCA Graduate', 'PHP', 'MySQL', 'JavaScript', 'Web Development'],
   authors: [{ name: 'Umarr' }],
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/icon.svg',
+  },
   openGraph: {
     title: 'Umarr | Full Stack Developer',
     description: 'Portfolio of Umarr, a BCA Graduate and Full Stack Developer specializing in PHP, MySQL, JavaScript, and modern web technologies.',
