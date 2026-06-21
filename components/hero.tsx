@@ -7,10 +7,8 @@ import { Button } from "@/components/ui/button"
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Animated background elements */}
       <div className="absolute inset-0 grid-bg opacity-30" />
-      
-      {/* Floating orbs */}
+
       <motion.div
         className="absolute top-20 left-10 w-72 h-72 rounded-full bg-primary/10 blur-3xl"
         animate={{
@@ -27,9 +25,8 @@ export function Hero() {
         }}
         transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
       />
-      
+
       <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
-        {/* Status badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -41,22 +38,20 @@ export function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
             </span>
-            Available for work
+            Open to Internship & Entry-Level Opportunities
           </span>
         </motion.div>
 
-        {/* Main heading */}
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6"
         >
-          <span className="text-foreground">{"Hi, I'm "}</span>
-          <span className="text-primary glow-text">Umarr Faruk</span>
+          <span className="text-foreground">Hi, I&apos;m </span>
+          <span className="text-primary glow-text">Umarr</span>
         </motion.h1>
 
-        {/* Subtitle with typing effect */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -64,32 +59,24 @@ export function Hero() {
           className="mb-8"
         >
           <p className="text-xl md:text-2xl text-muted-foreground font-mono">
-            <span className="text-primary">{"<"}</span>
-            BCA Student
-            <span className="text-primary">{" />"}</span>
-            <span className="mx-3 text-border">|</span>
-            <span className="text-primary">{"<"}</span>
-            Full Stack Developer
-            <span className="text-primary">{" />"}</span>
+            BCA Graduate | Full Stack Developer
           </p>
         </motion.div>
 
-        {/* Description */}
         <motion.p
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed"
         >
-          I am a passionate BCA student focused on Full Stack Development. I enjoy building real-world web applications using PHP, MySQL, JavaScript, and modern development tools. My goal is to become a professional Software Developer.
+          I build modern web applications, create intuitive user experiences, and continuously learn emerging technologies to become a better software developer.
         </motion.p>
 
-        {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+          className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 mb-10"
         >
           <Button
             size="lg"
@@ -98,6 +85,11 @@ export function Hero() {
           >
             View Projects
           </Button>
+          <a href="https://drive.google.com/file/d/1npwlJpDMYRw9501V53wISobrb7a0IJ9-/view?pli=1" target="_blank" rel="noopener noreferrer">
+            <Button size="lg" variant="outline" className="border-border hover:border-primary hover:text-primary px-8 py-6 text-lg">
+              Download Resume
+            </Button>
+          </a>
           <Button
             size="lg"
             variant="outline"
@@ -108,39 +100,40 @@ export function Hero() {
           </Button>
         </motion.div>
 
-        {/* Social links */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1 }}
-          className="flex items-center justify-center gap-4 sm:gap-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.9 }}
+          className="mb-12 flex flex-wrap justify-center gap-3"
         >
-          {[
-            { icon: Github, href: "https://github.com/umarr48", label: "GitHub" },
-            { icon: Linkedin, href: "https://linkedin.com/in/umar-faruk-577b1034a", label: "LinkedIn" },
-          ].map(({ icon: Icon, href, label }) => (
-            <a
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-4 sm:p-3 rounded-full border border-border hover:border-primary hover:text-primary transition-all duration-300 hover:glow-cyan active:scale-95 touch-manipulation"
-              aria-label={label}
-            >
-              <Icon className="w-6 h-6 sm:w-5 sm:h-5" />
-            </a>
-          ))}
+          <a
+            href="https://github.com/umarr48"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card/40 text-sm text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
+          >
+            <Github className="w-4 h-4" />
+            GitHub Profile
+          </a>
+          <a
+            href="https://www.linkedin.com/in/umar-faruk-577b1034a/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border bg-card/40 text-sm text-muted-foreground hover:text-primary hover:border-primary transition-all duration-300"
+          >
+            <Linkedin className="w-4 h-4" />
+            LinkedIn Profile
+          </a>
         </motion.div>
       </div>
 
-      {/* Scroll indicator */}
       <motion.div
         className="absolute bottom-8 left-1/2 -translate-x-1/2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [0, 10, 0] }}
-        transition={{ 
+        transition={{
           opacity: { delay: 1.2 },
-          y: { duration: 2, repeat: Infinity, ease: "easeInOut" }
+          y: { duration: 2, repeat: Infinity, ease: "easeInOut" },
         }}
       >
         <ArrowDown className="w-6 h-6 text-muted-foreground" />

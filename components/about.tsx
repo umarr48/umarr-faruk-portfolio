@@ -6,23 +6,23 @@ import { Code2, Brain, Rocket, Sparkles } from "lucide-react"
 const highlights = [
   {
     icon: Code2,
-    title: "Clean Code",
-    description: "Writing maintainable, scalable code following best practices and design patterns.",
+    title: "BCA Graduate",
+    description: "Built a strong academic foundation in computing, software concepts, and problem solving.",
   },
   {
     icon: Brain,
-    title: "Problem Solving",
-    description: "Breaking down complex problems and building efficient, practical solutions.",
+    title: "Full Stack Development Enthusiast",
+    description: "Focused on building complete web applications using practical and modern technologies.",
   },
   {
     icon: Rocket,
-    title: "Full Stack",
-    description: "Building complete applications from database design to user interface.",
+    title: "Problem Solver",
+    description: "Enjoys breaking down real-world requirements into simple, working, user-friendly solutions.",
   },
   {
     icon: Sparkles,
-    title: "Continuous Learning",
-    description: "Dedicated to mastering new technologies and industry best practices.",
+    title: "Continuous Learner",
+    description: "Consistently improving skills through hands-on projects, practice, and new technologies.",
   },
 ]
 
@@ -40,8 +40,8 @@ export function About() {
         >
           <p className="text-primary font-mono text-sm mb-2">{"// About Me"}</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-foreground">Crafting Digital </span>
-            <span className="text-primary">Experiences</span>
+            <span className="text-foreground">Professional </span>
+            <span className="text-primary">Profile</span>
           </h2>
         </motion.div>
 
@@ -55,25 +55,25 @@ export function About() {
             className="space-y-6"
           >
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I&apos;m a Final Year BCA student specializing in Full Stack Development with hands-on experience building practical web applications. My passion lies in creating efficient, user-friendly solutions that solve real-world problems. I&apos;ve developed strong fundamentals in software development through both academic coursework and personal projects.
+              I am a BCA graduate and passionate Full Stack Developer who enjoys building practical web applications, learning new technologies, and turning ideas into useful digital experiences.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              My technical foundation includes <span className="text-primary">PHP</span>, <span className="text-primary">MySQL</span>, <span className="text-primary">JavaScript</span>, and modern web development practices. I excel at designing scalable database architectures, building responsive user interfaces, and writing clean, maintainable backend code. I&apos;m committed to best practices and writing code that other developers can easily understand and build upon.
+              My interest in software development grew through hands-on learning with <span className="text-primary">PHP</span>, <span className="text-primary">MySQL</span>, <span className="text-primary">JavaScript</span>, and web development tools. I enjoy building complete applications that solve real-world problems and provide a smooth user experience.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Beyond coding, I&apos;m dedicated to continuous learning and staying current with industry developments. I approach each project with a focus on quality, reliability, and delivering tangible value. I&apos;m ready to bring strong technical skills and a strong work ethic to my first professional role.
+              I value clean implementation, continuous improvement, and consistent practice. My goal is to grow as a software engineer while contributing to meaningful projects and collaborative teams.
             </p>
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border">
+            {/* Highlights */}
+            <div className="grid grid-cols-2 gap-4 pt-8 border-t border-border">
               {[
-                { value: "Final Year", label: "BCA Student" },
-                { value: "Multiple", label: "Academic & Personal Projects" },
-                { value: "Strong", label: "Interest in Software Development" },
-              ].map(({ value, label }) => (
+                "BCA Graduate",
+                "Full Stack Development Enthusiast",
+                "Problem Solver",
+                "Continuous Learner",
+              ].map((label) => (
                 <div key={label} className="text-center">
-                  <p className="text-2xl md:text-3xl font-bold text-primary leading-tight">{value}</p>
-                  <p className="text-xs text-muted-foreground mt-2">{label}</p>
+                  <p className="text-base md:text-lg font-semibold text-primary">{label}</p>
                 </div>
               ))}
             </div>

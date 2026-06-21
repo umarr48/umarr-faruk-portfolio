@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ExternalLink, Github, Sparkles, Car, Code2 } from "lucide-react"
+import { ExternalLink, Github, Car, Code2, BookOpen } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 
@@ -9,9 +9,8 @@ const featuredProjects = [
   {
     title: "Driving School Management System",
     description:
-      "A complete driving school management platform that handles student registration, instructor assignment, booking management, mock tests, certificate generation, and administrative operations. Features comprehensive dashboards for both students and administrators with real-time updates.",
-    tags: ["PHP", "MySQL", "Bootstrap", "JavaScript"],
-    features: ["Student Dashboard", "Admin Dashboard", "Booking System", "Mock Tests", "Vehicle Management", "Certificate Generation"],
+      "A complete driving school management platform that streamlines student registration, booking management, instructor assignment, mock tests, certificate generation, and administrative operations.",
+    tags: ["PHP", "MySQL", "Bootstrap", "JavaScript", "HTML", "CSS"],
     liveUrl: "#",
     githubUrl: "https://github.com/umarr48",
     icon: Car,
@@ -19,12 +18,20 @@ const featuredProjects = [
   {
     title: "Daily Coding Coach",
     description:
-      "An AI-powered coding learning platform that helps beginners improve programming skills through guided practice, coding challenges, and progress tracking. Provides personalized learning paths and real-time feedback to accelerate skill development.",
-    tags: ["AI", "Python", "JavaScript", "Learning Platform"],
-    features: ["Guided Practice", "Coding Challenges", "Progress Tracking", "Personalized Learning", "Real-time Feedback", "Skill Assessment"],
+      "An AI-powered coding learning platform designed to help beginners improve programming skills through guided practice, coding challenges, progress tracking, and personalized learning paths.",
+    tags: ["AI Assistant", "Coding Challenges", "Progress Tracking", "Learning Roadmaps"],
     liveUrl: "#",
     githubUrl: "https://github.com/umarr48",
-    icon: Sparkles,
+    icon: BookOpen,
+  },
+  {
+    title: "Portfolio Website",
+    description:
+      "A futuristic developer portfolio showcasing projects, technical skills, achievements, and professional experience using modern UI/UX principles.",
+    tags: ["Next.js", "React", "Framer Motion", "Tailwind CSS", "TypeScript"],
+    liveUrl: "https://v0-futuristic-developer-portfolio-iota.vercel.app",
+    githubUrl: "https://github.com/umarr48",
+    icon: Code2,
   },
 ]
 
@@ -51,7 +58,7 @@ export function Projects() {
             <span className="text-primary">Projects</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl">
-            Practical applications demonstrating full-stack development capabilities, database design, and real-world problem solving.
+            Selected projects that highlight practical problem solving, complete application building, and a strong focus on user experience.
           </p>
         </motion.div>
 
@@ -100,19 +107,6 @@ export function Projects() {
                 <div className="p-6 rounded-xl bg-card border border-border mb-6">
                   <p className="text-muted-foreground leading-relaxed">{project.description}</p>
                 </div>
-                {project.features && (
-                  <div className="mb-6">
-                    <p className="text-sm text-primary font-semibold mb-3">Key Features:</p>
-                    <div className="grid grid-cols-2 gap-2">
-                      {project.features.map((feature) => (
-                        <div key={feature} className="flex items-center gap-2">
-                          <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                          <span className="text-sm text-muted-foreground">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map((tag) => (
                     <Badge key={tag} variant="secondary" className="font-mono text-xs">
@@ -129,7 +123,7 @@ export function Projects() {
                     aria-label="View source code"
                   >
                     <Github className="w-4 h-4" />
-                    <span>GitHub</span>
+                    <span>GitHub Repository</span>
                   </a>
                   {project.liveUrl !== "#" && (
                     <a
@@ -163,7 +157,7 @@ export function Projects() {
           >
             <Button variant="outline" className="border-border hover:border-primary hover:text-primary gap-2 active:scale-95 touch-manipulation">
               <Github className="w-4 h-4" />
-              View All Projects on GitHub
+              View GitHub Repository
             </Button>
           </a>
         </motion.div>

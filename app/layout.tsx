@@ -15,18 +15,18 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: 'Umarr | Full Stack Developer',
-  description: 'Portfolio of Umarr, a BCA Student and Full Stack Developer specializing in PHP, MySQL, JavaScript, and modern web technologies.',
-  keywords: ['developer', 'full stack', 'PHP', 'MySQL', 'JavaScript', 'web development', 'BCA student'],
+  description: 'Portfolio of Umarr, a BCA Graduate and Full Stack Developer specializing in PHP, MySQL, JavaScript, and modern web technologies.',
+  keywords: ['Umarr', 'Full Stack Developer', 'BCA Graduate', 'PHP', 'MySQL', 'JavaScript', 'Web Development'],
   authors: [{ name: 'Umarr' }],
   openGraph: {
     title: 'Umarr | Full Stack Developer',
-    description: 'Portfolio of Umarr, a BCA Student and Full Stack Developer specializing in PHP, MySQL, JavaScript, and modern web technologies.',
+    description: 'Portfolio of Umarr, a BCA Graduate and Full Stack Developer specializing in PHP, MySQL, JavaScript, and modern web technologies.',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Umarr | Full Stack Developer',
-    description: 'BCA Student and Full Stack Developer.',
+    description: 'Portfolio of Umarr, a BCA Graduate and Full Stack Developer specializing in PHP, MySQL, JavaScript, and modern web technologies.',
   },
 }
 

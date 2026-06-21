@@ -1,13 +1,12 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Github, Linkedin, Globe, Mail, Heart } from "lucide-react"
+import { Github, Linkedin, Mail } from "lucide-react"
 
 const socialLinks = [
   { icon: Github, href: "https://github.com/umarr48", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com/in/umar-faruk-577b1034a", label: "LinkedIn" },
-  { icon: Globe, href: "https://v0-futuristic-developer-portfolio-iota.vercel.app", label: "Portfolio" },
-  { icon: Mail, href: "mailto:hello@umarr.dev", label: "Email" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/umar-faruk-577b1034a/", label: "LinkedIn" },
+  { icon: Mail, href: "mailto:farukumarfaruk161@gmail.com", label: "Email" },
 ]
 
 export function Footer() {
@@ -28,22 +27,12 @@ export function Footer() {
               U<span className="text-foreground">.</span>
             </a>
             <p className="text-sm text-muted-foreground">
-              © {currentYear} Umarr. All Rights Reserved.
+              © 2026 Umarr. All Rights Reserved.
             </p>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-muted-foreground mt-1">
               Designed & Developed by Umarr.
             </p>
           </motion.div>
-
-          {/* Built with love */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            className="text-sm text-muted-foreground flex items-center gap-1"
-          >
-            Built with <Heart className="w-4 h-4 text-primary fill-primary" /> using Next.js & Tailwind
-          </motion.p>
 
           {/* Social links */}
           <motion.div

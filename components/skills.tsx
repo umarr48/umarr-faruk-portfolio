@@ -6,47 +6,50 @@ const skillCategories = [
   {
     title: "Frontend",
     skills: [
-      { name: "HTML5", level: 90 },
-      { name: "CSS3", level: 90 },
-      { name: "JavaScript", level: 85 },
+      { name: "HTML5", level: 95 },
+      { name: "CSS3", level: 92 },
+      { name: "JavaScript", level: 90 },
       { name: "Bootstrap", level: 88 },
+      { name: "Responsive Design", level: 94 },
     ],
   },
   {
     title: "Backend",
     skills: [
-      { name: "PHP", level: 88 },
-      { name: "MySQL", level: 85 },
+      { name: "PHP", level: 90 },
+      { name: "MySQL", level: 88 },
+      { name: "REST APIs", level: 80 },
+      { name: "XAMPP", level: 85 },
       { name: "Database Design", level: 82 },
-      { name: "Server-side Logic", level: 80 },
     ],
   },
   {
     title: "Programming",
     skills: [
-      { name: "Python", level: 80 },
-      { name: "Data Structures", level: 82 },
+      { name: "Python", level: 82 },
+      { name: "Data Structures", level: 80 },
       { name: "Algorithms", level: 78 },
-      { name: "Problem Solving", level: 85 },
+      { name: "Problem Solving", level: 86 },
+      { name: "OOP Concepts", level: 84 },
     ],
   },
   {
-    title: "Tools & Learning",
+    title: "Tools",
     skills: [
-      { name: "Git & GitHub", level: 88 },
-      { name: "VS Code", level: 90 },
+      { name: "Git", level: 90 },
+      { name: "GitHub", level: 90 },
+      { name: "VS Code", level: 95 },
       { name: "XAMPP", level: 85 },
-      { name: "Full Stack Development", level: 82 },
+      { name: "Debugging", level: 84 },
     ],
   },
 ]
 
 const technologies = [
-  "HTML5", "CSS3", "JavaScript", "Bootstrap", 
-  "PHP", "MySQL", "Python",
-  "Git", "GitHub", "VS Code", "XAMPP",
-  "Database Design", "Data Structures", "Algorithms",
-  "Full Stack Development", "Mobile App Development"
+  "HTML5", "CSS3", "JavaScript", "Bootstrap", "PHP",
+  "MySQL", "Python", "Git", "GitHub", "VS Code",
+  "XAMPP", "Responsive Design", "Data Structures", "Algorithms", "Full Stack Development",
+  "Mobile Application Development", "Software Engineering",
 ]
 
 export function Skills() {
@@ -63,11 +66,11 @@ export function Skills() {
         >
           <p className="text-primary font-mono text-sm mb-2">{"// Skills & Expertise"}</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-foreground">Technical </span>
-            <span className="text-primary">Proficiency</span>
+            <span className="text-foreground">Skills & </span>
+            <span className="text-primary">Learning Areas</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl">
-            Proficient in modern web development technologies with practical experience building full-stack applications. Strong foundation in both frontend and backend development.
+            A practical skill set focused on building responsive interfaces, backend workflows, and reliable web applications.
           </p>
         </motion.div>
 
@@ -122,7 +125,7 @@ export function Skills() {
           className="relative"
         >
           <div className="text-center mb-8">
-            <h3 className="text-xl font-semibold text-foreground">Full Technology Stack</h3>
+            <h3 className="text-xl font-semibold text-foreground">Currently Using and Learning</h3>
           </div>
           <div className="flex flex-wrap justify-center gap-3">
             {technologies.map((tech, index) => (

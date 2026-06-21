@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react"
 import { motion } from "framer-motion"
-import { Send, Mail, MapPin, Clock, CheckCircle2, XCircle, Github, Linkedin } from "lucide-react"
+import { Send, Mail, Github, Linkedin, CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -66,11 +66,11 @@ export function Contact() {
         >
           <p className="text-primary font-mono text-sm mb-2">{"// Get In Touch"}</p>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-foreground">Let's Work </span>
-            <span className="text-primary">Together</span>
+            <span className="text-foreground">Let's Connect</span>
+            <span className="text-primary"> Professionally</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            I&apos;m actively seeking full-time opportunities and freelance projects. Whether you have a job opening or want to discuss potential collaboration, I&apos;d love to hear from you.
+            I’m open to internship opportunities, entry-level roles, collaborations, and project discussions.
           </p>
         </motion.div>
 
@@ -84,20 +84,14 @@ export function Contact() {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-semibold mb-6 text-foreground">Connect With Me</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-foreground">Contact Information</h3>
               <div className="space-y-6">
                 {[
+                  { icon: Github, label: "GitHub", value: "https://github.com/umarr48", href: "https://github.com/umarr48" },
+                  { icon: Linkedin, label: "LinkedIn", value: "https://www.linkedin.com/in/umar-faruk-577b1034a/", href: "https://www.linkedin.com/in/umar-faruk-577b1034a/" },
                   { icon: Mail, label: "Email", value: "farukumarfaruk161@gmail.com", href: "mailto:farukumarfaruk161@gmail.com" },
-                  { icon: Github, label: "GitHub", value: "github.com/umarr48", href: "https://github.com/umarr48" },
-                  { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/umar-faruk", href: "https://linkedin.com/in/umar-faruk-577b1034a" },
                 ].map(({ icon: Icon, label, value, href }) => (
-                  <a 
-                    key={label}
-                    href={href}
-                    target={label !== "Email" ? "_blank" : undefined}
-                    rel={label !== "Email" ? "noopener noreferrer" : undefined}
-                    className="flex items-center gap-4 hover:opacity-80 transition-opacity"
-                  >
+                  <a key={label} href={href} target={href.startsWith("http") ? "_blank" : undefined} rel={href.startsWith("http") ? "noopener noreferrer" : undefined} className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <Icon className="w-5 h-5 text-primary" />
                     </div>
@@ -117,9 +111,9 @@ export function Contact() {
                   <Send className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground mb-1">Responsive Communication</h4>
+                  <h4 className="font-semibold text-foreground mb-1">Quick Response</h4>
                   <p className="text-sm text-muted-foreground">
-                    I prioritize quick responses to inquiries. Contact me for job opportunities, freelance projects, or technical discussions.
+                    I usually respond within a few hours. Feel free to reach out for internships, entry-level roles, collaborations, or project discussions.
                   </p>
                 </div>
               </div>
@@ -132,10 +126,10 @@ export function Contact() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
                   <span className="relative inline-flex rounded-full h-3 w-3 bg-primary" />
                 </span>
-                <span className="font-semibold text-foreground">Open to Opportunities</span>
+                <span className="font-semibold text-foreground">Currently Available</span>
               </div>
               <p className="text-sm text-muted-foreground">
-                Actively seeking full-time positions and freelance projects. Interested in roles focusing on web development, database design, and backend architecture.
+                I’m open to internship and entry-level opportunities in full stack development and web technologies.
               </p>
             </div>
           </motion.div>
@@ -169,7 +163,7 @@ export function Contact() {
                     <Input
                       id="name"
                       name="name"
-                      placeholder="John Doe"
+                      placeholder="Your Name"
                       required
                       className="bg-card border-border focus:border-primary"
                     />
@@ -180,7 +174,7 @@ export function Contact() {
                       id="email"
                       name="email"
                       type="email"
-                      placeholder="john@example.com"
+                      placeholder="you@example.com"
                       required
                       className="bg-card border-border focus:border-primary"
                     />
@@ -188,22 +182,11 @@ export function Contact() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="subject" className="text-foreground">Subject</Label>
-                  <Input
-                    id="subject"
-                    name="subject"
-                    placeholder="Project Inquiry"
-                    required
-                    className="bg-card border-border focus:border-primary"
-                  />
-                </div>
-
-                <div className="space-y-2">
                   <Label htmlFor="message" className="text-foreground">Message</Label>
                   <Textarea
                     id="message"
                     name="message"
-                    placeholder="Tell me about your project..."
+                    placeholder="Tell me about the opportunity or project..."
                     rows={6}
                     required
                     className="bg-card border-border focus:border-primary resize-none"
