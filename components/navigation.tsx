@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import Image from "next/image"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -47,11 +48,17 @@ export function Navigation() {
             {/* Logo */}
             <motion.a
               href="#"
-              className="text-2xl font-bold text-primary glow-text"
+              className="inline-flex items-center gap-3 text-2xl font-bold text-primary glow-text"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              aria-label="Home"
             >
-              U<span className="text-foreground">.</span>
+              <span className="relative flex h-10 w-10 items-center justify-center rounded-xl border border-primary/30 bg-primary/10 shadow-[0_0_20px_rgba(45,212,191,0.25)]">
+                <Image src="/icon.svg" alt="Umarr logo" width={28} height={28} priority />
+              </span>
+              <span className="hidden sm:inline">
+                U<span className="text-foreground">.</span>
+              </span>
             </motion.a>
 
             {/* Desktop Navigation */}
