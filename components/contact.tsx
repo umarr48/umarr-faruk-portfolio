@@ -16,17 +16,28 @@ export function Contact() {
   const [error, setError] = useState<string | null>(null)
   const [showToast, setShowToast] = useState(false)
 
+  const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID
+  const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
+  const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
     setError(null)
+
+    if (!serviceId || !templateId || !publicKey) {
+      setError("EmailJS is not configured yet. Please add the service, template, and public key environment variables.")
+      setShowToast(true)
+      setIsSubmitting(false)
+      return
+    }
     
     try {
       await emailjs.sendForm(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        serviceId,
+        templateId,
         formRef.current!,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
+        publicKey
       )
       
       setIsSubmitted(true)
@@ -215,6 +226,18 @@ export function Contact() {
                     </span>
                   )}
                 </Button>
+
+                {showToast && error && (
+                  <p className="text-sm text-red-400" role="alert">
+                    {error}
+                  </p>
+                )}
+
+                {showToast && isSubmitted && !error && (
+                  <p className="text-sm text-primary" role="status">
+                    Your message was sent successfully.
+                  </p>
+                )}
               </form>
             )}
           </motion.div>
