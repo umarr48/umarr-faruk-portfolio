@@ -20,6 +20,10 @@ export function Contact() {
   const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
   const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
 
+  console.log("SERVICE:", process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID)
+  console.log("TEMPLATE:", process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID)
+  console.log("PUBLIC:", process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY)
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsSubmitting(true)
