@@ -12,7 +12,7 @@ const featuredProjects = [
     description:
       "A complete driving school management platform that streamlines student registration, booking management, instructor assignment, mock tests, certificate generation, and administrative operations.",
     tags: ["PHP", "MySQL", "Bootstrap", "JavaScript", "HTML", "CSS"],
-    screenshot: "/Projects/driving-school.png",
+    screenshot: "/Projects/dashboard.png",
     liveUrl: "#",
     githubUrl: "https://github.com/umarr48",
     icon: Car,
