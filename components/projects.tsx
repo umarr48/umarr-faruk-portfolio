@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { ExternalLink, Github, Car, Code2, BookOpen } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -11,6 +12,7 @@ const featuredProjects = [
     description:
       "A complete driving school management platform that streamlines student registration, booking management, instructor assignment, mock tests, certificate generation, and administrative operations.",
     tags: ["PHP", "MySQL", "Bootstrap", "JavaScript", "HTML", "CSS"],
+    screenshot: "/projects/driving-school.png",
     liveUrl: "#",
     githubUrl: "https://github.com/umarr48",
     icon: Car,
@@ -20,6 +22,7 @@ const featuredProjects = [
     description:
       "An AI-powered coding learning platform designed to help beginners improve programming skills through guided practice, coding challenges, progress tracking, and personalized learning paths.",
     tags: ["AI Assistant", "Coding Challenges", "Progress Tracking", "Learning Roadmaps"],
+    screenshot: "/projects/daily-coding-coach.png",
     liveUrl: "#",
     githubUrl: "https://github.com/umarr48",
     icon: BookOpen,
@@ -29,6 +32,7 @@ const featuredProjects = [
     description:
       "A futuristic developer portfolio showcasing projects, technical skills, achievements, and professional experience using modern UI/UX principles.",
     tags: ["Next.js", "React", "Framer Motion", "Tailwind CSS", "TypeScript"],
+    screenshot: "/projects/portfolio.png",
     liveUrl: "https://v0-futuristic-developer-portfolio-iota.vercel.app",
     githubUrl: "https://github.com/umarr48",
     icon: Code2,
@@ -82,19 +86,31 @@ export function Projects() {
                 transition={{ duration: 0.3 }}
               >
                 <div className="aspect-video rounded-xl overflow-hidden border border-border bg-card relative">
-                  <div className="absolute inset-0 bg-grid-pattern opacity-30" />
-                  <div className="w-full h-full bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center relative">
-                    <div className="text-center p-8">
-                      <motion.div 
-                        className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-primary/20 border border-primary/30 flex items-center justify-center"
-                        whileHover={{ rotate: 5, scale: 1.1 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <project.icon className="w-10 h-10 text-primary" />
-                      </motion.div>
-                      <p className="text-foreground font-semibold text-lg">{project.title}</p>
-                    </div>
-                  </div>
+                  {project.screenshot ? (
+                    <Image
+                      src={project.screenshot}
+                      alt={`${project.title} screenshot`}
+                      fill
+                      className="object-cover object-top"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                    />
+                  ) : (
+                    <>
+                      <div className="absolute inset-0 bg-grid-pattern opacity-30" />
+                      <div className="w-full h-full bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center relative">
+                        <div className="text-center p-8">
+                          <motion.div 
+                            className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-primary/20 border border-primary/30 flex items-center justify-center"
+                            whileHover={{ rotate: 5, scale: 1.1 }}
+                            transition={{ duration: 0.3 }}
+                          >
+                            <project.icon className="w-10 h-10 text-primary" />
+                          </motion.div>
+                          <p className="text-foreground font-semibold text-lg">{project.title}</p>
+                        </div>
+                      </div>
+                    </>
+                  )}
                 </div>
                 {/* Glow effect on hover */}
                 <div className="absolute inset-0 rounded-xl bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl -z-10" />
