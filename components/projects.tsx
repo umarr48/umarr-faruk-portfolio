@@ -22,7 +22,6 @@ const featuredProjects = [
     description:
       "An AI-powered coding learning platform designed to help beginners improve programming skills through guided practice, coding challenges, progress tracking, and personalized learning paths.",
     tags: ["AI Assistant", "Coding Challenges", "Progress Tracking", "Learning Roadmaps"],
-    screenshot: "/Projects/daily-coding-coach.png",
     liveUrl: "#",
     githubUrl: "https://github.com/umarr48",
     icon: BookOpen,
@@ -32,7 +31,6 @@ const featuredProjects = [
     description:
       "A futuristic developer portfolio showcasing projects, technical skills, achievements, and professional experience using modern UI/UX principles.",
     tags: ["Next.js", "React", "Framer Motion", "Tailwind CSS", "TypeScript"],
-    screenshot: "/Projects/portfolio.png",
     liveUrl: "https://v0-futuristic-developer-portfolio-iota.vercel.app",
     githubUrl: "https://github.com/umarr48",
     icon: Code2,
