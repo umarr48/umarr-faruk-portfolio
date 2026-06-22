@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/navigation"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
+import { Workflow } from "@/components/workflow"
 import { Projects } from "@/components/projects"
 import { Skills } from "@/components/skills"
 import { CurrentlyLearning } from "@/components/currently-learning"
@@ -13,6 +14,7 @@ export default function Home() {
       <Navigation />
       <Hero />
       <About />
+      <Workflow />
       <Projects />
       <Skills />
       <CurrentlyLearning />
