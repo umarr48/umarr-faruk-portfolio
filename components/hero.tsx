@@ -1,9 +1,51 @@
 "use client"
 
+import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { ArrowDown, Github, Linkedin } from "lucide-react"
 import { Button } from "@/components/ui/button"
+
+const roles = [
+  "Full Stack Developer",
+  "PHP Developer",
+  "React Learner",
+  "AI Enthusiast",
+]
+
+function TypingRoles() {
+  const [displayText, setDisplayText] = useState("")
+  const [roleIndex, setRoleIndex] = useState(0)
+  const [isDeleting, setIsDeleting] = useState(false)
+
+  useEffect(() => {
+    const currentRole = roles[roleIndex]
+    let timeoutId: ReturnType<typeof setTimeout>
+
+    if (!isDeleting && displayText === currentRole) {
+      timeoutId = setTimeout(() => setIsDeleting(true), 1400)
+    } else if (isDeleting && displayText === "") {
+      timeoutId = setTimeout(() => {
+        setIsDeleting(false)
+        setRoleIndex((currentIndex) => (currentIndex + 1) % roles.length)
+      }, 250)
+    } else {
+      timeoutId = setTimeout(() => {
+        const nextLength = isDeleting ? displayText.length - 1 : displayText.length + 1
+        setDisplayText(currentRole.slice(0, nextLength))
+      }, isDeleting ? 55 : 95)
+    }
+
+    return () => clearTimeout(timeoutId)
+  }, [displayText, isDeleting, roleIndex])
+
+  return (
+    <span className="inline-flex items-center gap-1">
+      <span>{displayText}</span>
+      <span className="inline-block h-6 w-[2px] bg-primary animate-pulse align-middle" />
+    </span>
+  )
+}
 
 export function Hero() {
   return (
@@ -88,8 +130,9 @@ export function Hero() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="mb-8"
             >
-              <p className="text-xl md:text-2xl text-muted-foreground font-mono">
-                BCA Graduate | Full Stack Developer
+              <p className="text-xl md:text-2xl text-muted-foreground font-mono flex flex-wrap items-center justify-center lg:justify-start gap-x-2 gap-y-1">
+                <span>BCA Graduate |</span>
+                <TypingRoles />
               </p>
             </motion.div>
 
