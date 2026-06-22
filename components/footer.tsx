@@ -30,7 +30,7 @@ export function Footer() {
               © 2026 Umarr. All Rights Reserved.
             </p>
             <p className="text-sm text-muted-foreground mt-1">
-              Designed & Developed by Umarr.
+              Designed & Developed by Umarrrrrrrrrrrr.
             </p>
           </motion.div>
 
