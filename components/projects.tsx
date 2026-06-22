@@ -3,20 +3,21 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { ExternalLink, Github, Car, Code2, BookOpen } from "lucide-react"
+import type { LucideIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 
-const featuredProjects = [
-  {
-    title: "Driving School Management System",
-    description:
-      "A complete driving school management platform that streamlines student registration, booking management, instructor assignment, mock tests, certificate generation, and administrative operations.",
-    tags: ["PHP", "MySQL", "Bootstrap", "JavaScript", "HTML", "CSS"],
-    screenshot: "/Projects/dashboard.png",
-    liveUrl: "#",
-    githubUrl: "https://github.com/umarr48",
-    icon: Car,
-  },
+type Project = {
+  title: string
+  description: string
+  tags: string[]
+  liveUrl: string
+  githubUrl: string
+  icon: LucideIcon
+  screenshot?: string
+}
+
+const featuredProjects: Project[] = [
   {
     title: "Daily Coding Coach",
     description:
