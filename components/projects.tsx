@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { ExternalLink, Github, Car, Code2, BookOpen } from "lucide-react"
+import { ExternalLink, Github, Code2 } from "lucide-react"
 import type { LucideIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -18,15 +18,6 @@ type Project = {
 }
 
 const featuredProjects: Project[] = [
-  {
-    title: "Daily Coding Coach",
-    description:
-      "An AI-powered coding learning platform designed to help beginners improve programming skills through guided practice, coding challenges, progress tracking, and personalized learning paths.",
-    tags: ["AI Assistant", "Coding Challenges", "Progress Tracking", "Learning Roadmaps"],
-    liveUrl: "#",
-    githubUrl: "https://github.com/umarr48",
-    icon: BookOpen,
-  },
   {
     title: "Portfolio Website",
     description:
