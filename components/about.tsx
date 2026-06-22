@@ -6,7 +6,7 @@ import { Code2, Brain, Rocket, Sparkles } from "lucide-react"
 const highlights = [
   {
     icon: Code2,
-    title: "BCA Graduate",
+    title: "BCA Gandu",
     description: "Built a strong academic foundation in computing, software concepts, and problem solving.",
   },
   {
