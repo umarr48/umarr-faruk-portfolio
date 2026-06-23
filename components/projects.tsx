@@ -169,6 +169,15 @@ export function Projects() {
                       <span>Watch Demo</span>
                     </a>
                   )}
+                  {project.screenshotGallery && project.screenshotGallery.length > 0 && (
+                    <button
+                      type="button"
+                      onClick={() => openScreenshots(project.screenshotGallery!)}
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border border-border bg-secondary text-secondary-foreground hover:border-primary hover:text-primary transition-all duration-300 active:scale-95 touch-manipulation text-sm"
+                    >
+                      <span>Screenshots</span>
+                    </button>
+                  )}
                 </div>
               </div>
             </motion.div>
@@ -194,6 +203,32 @@ export function Projects() {
           </a>
         </motion.div>
       </div>
+
+      <Dialog open={openGallery} onOpenChange={setOpenGallery}>
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle>Project Screenshots</DialogTitle>
+          </DialogHeader>
+          <div className="grid grid-cols-1 gap-6">
+            {galleryImages.map((image, index) => (
+              <div key={index} className="relative overflow-hidden rounded-lg border border-border">
+                <div className="relative aspect-video bg-muted">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 90vw"
+                  />
+                </div>
+                <div className="p-3 bg-background/50 border-t border-border">
+                  <p className="text-sm font-medium text-foreground">{image.alt}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>
   )
 }
