@@ -1,6 +1,5 @@
 import { Navigation } from "@/components/navigation"
 import { Hero } from "@/components/hero"
-import { FeaturedProject } from "@/components/featured-project"
 import { About } from "@/components/about"
 import { Workflow } from "@/components/workflow"
 import { Projects } from "@/components/projects"
@@ -14,7 +13,6 @@ export default function Home() {
     <main className="relative overflow-hidden noise-overlay">
       <Navigation />
       <Hero />
-      <FeaturedProject />
       <About />
       <Workflow />
       <Projects />
