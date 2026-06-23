@@ -27,6 +27,16 @@ const featuredProjects: Project[] = [
     githubUrl: "https://github.com/umarr48",
     icon: Code2,
   },
+  {
+    title: "Umarr Driving School Management System",
+    description:
+      "A practical management system for driving school operations, handling student workflows, scheduling, and daily administration with a clean interface.",
+    tags: ["PHP", "MySQL", "Bootstrap", "JavaScript"],
+    liveUrl: "https://youtu.be/1ZknT2V1zlc",
+    githubUrl: "https://github.com/umarr48",
+    icon: Code2,
+    screenshot: "/Projects/dashboard.png",
+  },
 ]
 
 
