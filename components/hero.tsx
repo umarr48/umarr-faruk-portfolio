@@ -70,21 +70,6 @@ export function Hero() {
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 w-full">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-          className="absolute left-1/2 top-6 -translate-x-1/2 rounded-full border border-primary/30 bg-primary/5 px-4 py-2 text-sm text-primary shadow-xl shadow-primary/10"
-        >
-          <span className="inline-flex items-center gap-2">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
-            </span>
-            Open to Internship & Entry-Level Opportunities 2026
-          </span>
-        </motion.div>
-
         <div className="flex flex-col gap-14 lg:grid lg:grid-cols-[minmax(0,1.15fr)_minmax(320px,380px)] lg:items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -140,10 +125,25 @@ export function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.55 }}
-              className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-12 leading-relaxed"
+              className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 mb-6 leading-relaxed"
             >
               I build modern web applications, create intuitive user experiences, and continuously learn emerging technologies to become a better software developer.
             </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.65 }}
+              className="mb-8 flex justify-center lg:justify-start"
+            >
+              <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-2 text-sm text-primary shadow-xl shadow-primary/10">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
+                </span>
+                Open to Internship & Entry-Level Opportunities 2026
+              </span>
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
