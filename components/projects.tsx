@@ -6,6 +6,8 @@ import { ExternalLink, Github, Code2 } from "lucide-react"
 import type { LucideIcon } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import { useState } from "react"
 
 type Project = {
   title: string
@@ -15,6 +17,7 @@ type Project = {
   githubUrl: string
   icon: LucideIcon
   screenshot?: string
+  screenshotGallery?: { src: string; alt: string }[]
 }
 
 const featuredProjects: Project[] = [
@@ -28,7 +31,7 @@ const featuredProjects: Project[] = [
     icon: Code2,
   },
   {
-    title: "Umarr Driving School Management System",
+    title: "Umarr Car Driving School Management System",
     description:
       "A practical management system for driving school operations, built to handle student workflows, scheduling, and everyday administration with a clean interface.",
     tags: ["PHP", "MySQL", "Bootstrap", "JavaScript"],
@@ -36,12 +39,25 @@ const featuredProjects: Project[] = [
     githubUrl: "https://github.com/umarr48",
     icon: Code2,
     screenshot: "/Projects/dashboard.png",
+    screenshotGallery: [
+      { src: "/Projects/dashboard.png", alt: "Dashboard" },
+      { src: "/Projects/Admin dashboard.png", alt: "Admin Dashboard" },
+      { src: "/Projects/why we choose.png", alt: "Why We Choose Us" },
+    ],
   },
 ]
 
 
 
 export function Projects() {
+  const [openGallery, setOpenGallery] = useState(false)
+  const [galleryImages, setGalleryImages] = useState<{ src: string; alt: string }[]>([])
+
+  const openScreenshots = (images: { src: string; alt: string }[]) => {
+    setGalleryImages(images)
+    setOpenGallery(true)
+  }
+
   return (
     <section id="projects" className="py-32 relative">
       {/* Background accent */}
