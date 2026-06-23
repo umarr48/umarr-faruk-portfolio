@@ -77,17 +77,17 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="flex flex-wrap justify-center items-center gap-4 md:gap-6 text-sm text-muted-foreground mb-8 pt-4"
         >
-          <a href="#about" className="hover:text-primary transition-colors">ABOUT</a>
+          <a href="#about" className="hover:text-primary transition-colors"></a>
           <span className="text-border">|</span>
-          <a href="#projects" className="hover:text-primary transition-colors">PROJECTS</a>
+          <a href="#projects" className="hover:text-primary transition-colors"></a>
           <span className="text-border">|</span>
-          <a href="#skills" className="hover:text-primary transition-colors">SKILLS</a>
+          <a href="#skills" className="hover:text-primary transition-colors"></a>
           <span className="text-border">|</span>
-          <a href="#learning" className="hover:text-primary transition-colors">LEARNING</a>
+          <a href="#learning" className="hover:text-primary transition-colors"></a>
           <span className="text-border">|</span>
-          <a href="#contact" className="hover:text-primary transition-colors">CONTACT</a>
+          <a href="#contact" className="hover:text-primary transition-colors"></a>
           <span className="text-border">|</span>
-          <a href="/resume" className="hover:text-primary transition-colors">Resume</a>
+          <a href="/resume" className="hover:text-primary transition-colors"></a>
         </motion.div>
 
         {/* Badge - After Navigation */}
