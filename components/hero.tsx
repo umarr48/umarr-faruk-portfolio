@@ -70,6 +70,22 @@ export function Hero() {
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 w-full">
+        {/* Top Center Badge */}
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="flex justify-center mb-8 lg:mb-12"
+        >
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 text-sm text-primary">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
+            </span>
+            Open to Internship & Entry-Level Opportunities 2026
+          </span>
+        </motion.div>
+
         <div className="flex flex-col gap-14 lg:grid lg:grid-cols-[minmax(0,1.15fr)_minmax(320px,380px)] lg:items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -99,21 +115,6 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="order-2 lg:order-1 text-center lg:text-left"
           >
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="mb-8"
-            >
-              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 text-sm text-primary">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
-                </span>
-                Open to Internship & Entry-Level Opportunities 2026
-              </span>
-            </motion.div>
-
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -177,7 +178,7 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.85 }}
-              className="mb-12 flex flex-wrap justify-center lg:justify-start gap-3"
+              className="flex flex-wrap justify-center lg:justify-start gap-3"
             >
               <a
                 href="https://github.com/umarr48"
