@@ -26,17 +26,6 @@ const featuredProjects: Project[] = [
     liveUrl: "https://v0-futuristic-developer-portfolio-iota.vercel.app",
     githubUrl: "https://github.com/umarr48",
     icon: Code2,
-    screenshot: "/Projects/why we choose.png",
-  },
-  {
-    title: "Umarr Driving School Management System",
-    description:
-      "A practical management system for driving school operations, built to handle student workflows, scheduling, and everyday administration with a clean interface.",
-    tags: ["PHP", "MySQL", "Bootstrap", "JavaScript"],
-    liveUrl: "#",
-    githubUrl: "https://github.com/umarr48",
-    icon: Code2,
-    screenshot: "/Projects/dashboard.png",
   },
 ]
 
