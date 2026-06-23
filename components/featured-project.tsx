@@ -2,14 +2,22 @@
 
 import { motion } from "framer-motion"
 import Image from "next/image"
-import { ExternalLink, Github, Play } from "lucide-react"
+import { ExternalLink, Github, Play, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import { useState } from "react"
 
 const techStack = ["PHP", "MySQL", "Bootstrap", "JavaScript"]
 const demoVideoUrl = "https://youtu.be/1ZknT2V1zlc"
+const projectImages = [
+  { src: "/Projects/dashboard.png", alt: "Dashboard" },
+  { src: "/Projects/Admin dashboard.png", alt: "Admin Dashboard" },
+  { src: "/Projects/why we choose.png", alt: "Why We Choose Us" },
+]
 
 export function FeaturedProject() {
+  const [showGallery, setShowGallery] = useState(false)
   return (
     <section id="featured-project" className="relative py-24 lg:py-28 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-primary/10 via-transparent to-primary/5 pointer-events-none" />
@@ -78,10 +86,8 @@ export function FeaturedProject() {
                   </a>
                 </Button>
 
-                <Button asChild size="lg" variant="secondary" className="px-6">
-                  <a href="/Projects/dashboard.png" target="_blank" rel="noopener noreferrer">
-                    Screenshots
-                  </a>
+                <Button size="lg" variant="secondary" className="px-6" onClick={() => setShowGallery(true)}>
+                  Screenshots
                 </Button>
               </div>
             </div>
@@ -126,6 +132,32 @@ export function FeaturedProject() {
           </motion.div>
         </div>
       </div>
+
+      <Dialog open={showGallery} onOpenChange={setShowGallery}>
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
+          <DialogHeader>
+            <DialogTitle>Project Screenshots</DialogTitle>
+          </DialogHeader>
+          <div className="grid grid-cols-1 gap-6">
+            {projectImages.map((image, index) => (
+              <div key={index} className="relative overflow-hidden rounded-lg border border-border">
+                <div className="relative aspect-video bg-muted">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 90vw"
+                  />
+                </div>
+                <div className="p-3 bg-background/50 border-t border-border">
+                  <p className="text-sm font-medium text-foreground">{image.alt}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>
   )
 }
