@@ -70,12 +70,32 @@ export function Hero() {
       />
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 w-full">
-        {/* Top Center Badge */}
+        {/* Navigation - Top */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="flex justify-center mb-8 lg:mb-12"
+          className="flex flex-wrap justify-center items-center gap-4 md:gap-6 text-sm text-muted-foreground mb-8 pt-4"
+        >
+          <a href="#about" className="hover:text-primary transition-colors">ABOUT</a>
+          <span className="text-border">|</span>
+          <a href="#projects" className="hover:text-primary transition-colors">PROJECTS</a>
+          <span className="text-border">|</span>
+          <a href="#skills" className="hover:text-primary transition-colors">SKILLS</a>
+          <span className="text-border">|</span>
+          <a href="#learning" className="hover:text-primary transition-colors">LEARNING</a>
+          <span className="text-border">|</span>
+          <a href="#contact" className="hover:text-primary transition-colors">CONTACT</a>
+          <span className="text-border">|</span>
+          <a href="/resume" className="hover:text-primary transition-colors">Resume</a>
+        </motion.div>
+
+        {/* Badge - After Navigation */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex justify-center mb-12"
         >
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/5 text-sm text-primary">
             <span className="relative flex h-2 w-2">
@@ -86,6 +106,7 @@ export function Hero() {
           </span>
         </motion.div>
 
+        {/* Hero Content */}
         <div className="flex flex-col gap-14 lg:grid lg:grid-cols-[minmax(0,1.15fr)_minmax(320px,380px)] lg:items-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
