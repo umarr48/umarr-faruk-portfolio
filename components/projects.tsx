@@ -30,7 +30,7 @@ const featuredProjects: Project[] = [
   {
     title: "Umarr Driving School Management System",
     description:
-      "A practical management system for driving school operations, handling student workflows, scheduling, and daily administration with a clean interface.",
+      "A practical management system for driving school operations, built to handle student workflows, scheduling, and everyday administration with a clean interface.",
     tags: ["PHP", "MySQL", "Bootstrap", "JavaScript"],
     liveUrl: "https://youtu.be/1ZknT2V1zlc",
     githubUrl: "https://github.com/umarr48",
@@ -139,7 +139,7 @@ export function Projects() {
                     aria-label="View source code"
                   >
                     <Github className="w-4 h-4" />
-                    <span>GitHub Repository</span>
+                    <span>GitHub</span>
                   </a>
                   {project.liveUrl !== "#" && (
                     <a
@@ -147,10 +147,10 @@ export function Projects() {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 active:scale-95 touch-manipulation text-sm"
-                      aria-label="View live site"
+                      aria-label="Watch demo video"
                     >
                       <ExternalLink className="w-4 h-4" />
-                      <span>Live Demo</span>
+                      <span>Watch Demo</span>
                     </a>
                   )}
                 </div>
