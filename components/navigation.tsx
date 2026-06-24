@@ -144,7 +144,7 @@ export function Navigation() {
                   transition={{ delay: 0.4 }}
                 >
                   <a
-                    href="https://drive.google.com/file/d/1npwlJpDMYRw9501V53wISobrb7a0IJ9-/view?pli=1"
+                    href="https://drive.google.com/file/d/1DfdI0cXgH1NgM8ctLBLPAvdlGQy8-IsH/view?usp=drivesdk"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
