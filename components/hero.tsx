@@ -180,7 +180,7 @@ export function Hero() {
               >
                 View Projects
               </Button>
-              <a href="https://drive.google.com/file/d/1npwlJpDMYRw9501V53wISobrb7a0IJ9-/view?pli=1" target="_blank" rel="noopener noreferrer">
+              <a href="https://drive.google.com/file/d/1DfdI0cXgH1NgM8ctLBLPAvdlGQy8-IsH/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">
                 <Button size="lg" variant="outline" className="border-border hover:border-primary hover:text-primary px-8 py-6 text-lg">
                   Download Resume
                 </Button>
