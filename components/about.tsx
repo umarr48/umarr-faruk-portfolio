@@ -67,10 +67,6 @@ export function About() {
             {/* Highlights */}
             <div className="grid grid-cols-2 gap-4 pt-8 border-t border-border">
               {[
-                "BCA Graduate",
-                "Full Stack Development Enthusiast",
-                "Problem Solver",
-                "Continuous Learner",
               ].map((label) => (
                 <div key={label} className="text-center">
                   <p className="text-base md:text-lg font-semibold text-primary">{label}</p>
